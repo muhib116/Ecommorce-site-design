@@ -1,11 +1,3 @@
-
-.section_header {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-}
-
 .category_container .cat_item{
     border: 1px solid var(--border_color);
     padding: 10px;

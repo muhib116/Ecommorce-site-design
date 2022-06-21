@@ -39,6 +39,8 @@ setTimeout(()=>
     // categories slider start
     $('#categories-carousel').owlCarousel({
         loop: true,
+        autoplay: true,
+        autoplayHoverPause:true,
         margin: 16,
         dots: false,
         nav: false,
@@ -62,5 +64,95 @@ setTimeout(()=>
         }
     })
     // categories slider end
+
+
+    // product slider start
+    $('#product-carousel, #women_product-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause:true,
+        margin: 16,
+        dots: false,
+        nav: false,
+        items: 7,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            480 : {
+                items: 2
+            },
+            768 : {
+                items: 3
+            },
+            900 : {
+                items: 4
+            },
+            1200 : {
+                items: 5
+            }
+        }
+    })
+    // product slider end
+
+
+    // new arrival product slider start
+    $('#new_arrival_products-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause:true,
+        margin: 16,
+        dots: false,
+        nav: false,
+        items: 7,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            480 : {
+                items: 2
+            },
+            768 : {
+                items: 3
+            },
+            900 : {
+                items: 4
+            },
+            1200 : {
+                items: 5
+            }
+        }
+    })
+    // new arrival product slider end
+
+
+    // best selling product slider start
+    $('#best_selling_products-carousel, #best_rated_products-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause:true,
+        margin: 16,
+        dots: false,
+        nav: false,
+        items: 4,
+        responsive : {
+            0 : {
+                items: 1
+            },
+            480 : {
+                items: 2
+            },
+            768 : {
+                items: 2
+            },
+            900 : {
+                items: 3
+            },
+            1200 : {
+                items: 3
+            }
+        }
+    })
+    // best selling product slider end
 
 }, delay)

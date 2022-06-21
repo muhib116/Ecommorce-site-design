@@ -3,11 +3,16 @@
 
 :root{
     --primary_color: #ff9f32;
-    --secondary_color: #ebd575;
+    --secondary_color: #3292FF;
     --success_color: #3aab3a;
-    --danger_color: rgb(255, 71, 21);
+    --danger_color: #ff4715;
+    --warning_color: #ffc400;
+
+    --product_view_bg: var(--success_color);
+    --product_wishlist_bg: var(--danger_color);
+
     --container_width: 1200px;
-    --container_padding: 0 15px;
+    --container_padding: 15px 25px;
 
     --border_color: #f2f2f2;
 
@@ -75,6 +80,7 @@ button{
     border: none;
     background-color: inherit;
     cursor: pointer;
+    font-family: inherit;
 }
 button:active{
     transform-origin: center;

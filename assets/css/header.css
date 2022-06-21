@@ -110,8 +110,10 @@
     border-bottom: 1px solid var(--border_color);
 }
 .bottom_bar_wrapper a{
-    padding: 0 5px;
+    padding: 5px 5px;
     line-height: 1.2;
+    color: #666;
+    font-weight: 500;
 }
 .mobile_category_close{
     display: none;

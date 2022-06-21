@@ -1,5 +1,12 @@
-.banner_wrapper img{
-    height: 100%;
+.banner_wrapper a{
+    overflow: hidden;
+    display: block;
+}
+.banner_wrapper a img{
+    transition: var(--transition);
+}
+.banner_wrapper a:hover img{
+    transform: scale(1.1) rotateZ(2deg);
 }
 .banner_wrapper>* {
     display: grid;

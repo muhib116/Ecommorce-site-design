@@ -3,7 +3,19 @@
 @import url('banner.css');
 @import url('mobie_bottom_nav.css');
 @import url('categories.css');
+@import url('products.css');
+@import url('new_arrival.css');
+@import url('best_selling.css');
+@import url('best_rated.css');
+@import url('limited_time_offer.css');
 
+
+.section_header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+}
 
 @media all and (max-width: 900px){
     body{
