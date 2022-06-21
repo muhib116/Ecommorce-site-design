@@ -1,0 +1,28 @@
+.banner_wrapper img{
+    height: 100%;
+}
+.banner_wrapper>* {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    margin-top: 0.8rem;
+}
+.banner_wrapper .banner_two{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+.banner_wrapper .banner_two_bottom{
+    display: grid;
+    gap: 0.8rem;
+}
+
+@media all and (max-width: 1100px){
+    .banner_wrapper>* {
+        grid-template-columns: 1fr;
+    }
+    .banner_wrapper .banner_three{
+        display: grid;
+        gap: 15px;
+    }
+}

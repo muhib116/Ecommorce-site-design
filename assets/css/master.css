@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+:root{
+    --primary_color: #ff9f32;
+    --secondary_color: #ebd575;
+    --success_color: #3aab3a;
+    --danger_color: rgb(255, 71, 21);
+    --container_width: 1200px;
+    --container_padding: 0 15px;
+
+    --border_color: #f2f2f2;
+
+    font-size: 16px;
+
+    --default_text_color: #444;
+
+    --topbar_bg: var(--primary_color);
+    --topbar_text_color: #fff;
+    --topbar_border_color: #fff4;
+
+    --shadow: 0 1px 4px #0001, 0 2px 10px #0001;
+    --transition: 0.3s ease;
+
+    --cart_width: 450px;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--default_text_color);
+    font-weight: 400;
+}
+
+.container{
+    max-width: var(--container_width);
+    width: 100%;
+    padding: var(--container_padding);
+    margin: auto;
+}
+.container_fluid{
+    padding: var(--container_padding);
+}
+
+.p_0{
+    padding: 0;
+}
+
+.px_0{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.py_0{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+a:is(:hover, .active){
+    color: var(--primary_color);
+    transform: translateY(-4px);
+}
+button{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+button:active{
+    transform-origin: center;
+    transform: scale(0.95);
+}
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.object-contain{
+    object-fit: contain;;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    border: 1px solid var(--border_color);
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+input:focus{
+    border-color: var(--primary_color);
+}
+svg{
+    width: 100%;
+}
+button:active{
+    transform: scale(0.95);
+}
+
+/* dropdown with image start */
+.dropdown_with_img{
+    display: inline-block;
+    position: relative;
+    padding-right: 10px;
+    perspective: 600px;
+    perspective-origin: center bottom;
+}
+.dropdown_with_img::before{
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border: 1px solid;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    width: 6px;
+    height: 6px;
+}
+.dropdown_with_img .main_item{
+    padding: 2px 15px;
+    display: block;
+    cursor: pointer;
+}
+.dropdown_with_img .lang_list{
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    box-shadow: var(--shadow);
+    border-top: 2px solid var(--primary_color);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    transform: rotatex(-95deg);
+    transition: var(--transition);
+}
+.dropdown_with_img .lang_list>*{
+    padding: 0.4rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font-weight: 300;
+    color: var(--default_text_color);
+}
+.dropdown_with_img .lang_list>*:hover{
+    background-color: #f8f8f8;
+}
+.dropdown_with_img .lang_list>*+*{
+    border-top: 1px solid var(--border_color);
+}
+.dropdown_with_img .lang_list img{
+    width: 15px;
+}
+.dropdown_with_img.active .lang_list,
+.dropdown_with_img:hover .lang_list{
+    transform: rotate(0deg);
+}
+/* dropdown with image end*/
+
+
+
+/* product counter start */
+.product_counter{
+    display: flex;
+    width: fit-content;
+    border: 1px solid var(--primary_color);
+}
+.product_counter input{
+    padding: 2px;
+    width: 50px;
+    text-align: center;
+    appearance: none;
+    border-radius: 0;
+    border: none;
+    font-size: 14px;
+    background: transparent;
+}
+.product_counter input:focus{
+    box-shadow: unset;
+}
+.product_counter button{
+    border: none;
+    background: var(--primary_color);
+    color: #fff;
+    display: grid;
+    place-content: center;
+    min-width: 20px;
+    aspect-ratio: 1/1;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0;
+}
+/* product counter end */
