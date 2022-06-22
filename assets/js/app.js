@@ -9,9 +9,9 @@ setTimeout(()=>
 
     if(cart_toggle_btn && cart_wrapper)
     {
-        cart_toggle_btn[0].addEventListener('click', toggleCart);
-        cart_toggle_btn[1].addEventListener('click', toggleCart);
-        cart_toggle_btn[2].addEventListener('click', toggleCart);
+        (cart_toggle_btn[0]) ? cart_toggle_btn[0].addEventListener('click', toggleCart) : '';
+        (cart_toggle_btn[1]) ? cart_toggle_btn[1].addEventListener('click', toggleCart) : '';
+        (cart_toggle_btn[2]) ? cart_toggle_btn[2].addEventListener('click', toggleCart) : '';
 
         function toggleCart(){
             cart_wrapper.classList.toggle('active')
@@ -25,8 +25,8 @@ setTimeout(()=>
     let bottom_bar_wrapper = document.querySelector('.bottom_bar_wrapper');
     if(CategoriesBtn && bottom_bar_wrapper)
     {
-        CategoriesBtn[0].addEventListener('click', toggleCat);
-        CategoriesBtn[1].addEventListener('click', toggleCat);
+        (CategoriesBtn[0]) ? CategoriesBtn[0].addEventListener('click', toggleCat) : '';
+        (CategoriesBtn[1]) ? CategoriesBtn[1].addEventListener('click', toggleCat) : '';
 
         function toggleCat()
         {
@@ -64,6 +64,27 @@ setTimeout(()=>
         }
     })
     // categories slider end
+
+
+    // top-shops slider start
+    $('#shop_list-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause:true,
+        margin: 16,
+        dots: false,
+        nav: false,
+        items: 7,
+        responsive : {
+            0 : {
+                items: 2
+            },
+            768 : {
+                items: 2
+            }
+        }
+    })
+    // top-shops slider end
 
 
     // product slider start

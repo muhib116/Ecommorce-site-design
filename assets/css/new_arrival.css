@@ -39,12 +39,12 @@
 .new_arrival_products_container .product_item .attributer .wishlist{
     background: var(--product_wishlist_bg);
     color: #fff;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(200%);
 }
 .new_arrival_products_container .product_item .attributer .quickview{
     background: var(--product_view_bg);
     color: #fff;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(150%);
     transition: var(--transition);
 }
 .new_arrival_products_container .product_item .attributer :is(.wishlist,.quickview):is(:hover,.active){

@@ -8,6 +8,39 @@
 @import url('best_selling.css');
 @import url('best_rated.css');
 @import url('limited_time_offer.css');
+@import url('featured_shops.css');
+
+
+@import url('all-categories.css');
+@import url('brands.css');
+@import url('single_product.css');
+
+
+/* rating style start */
+.rating{
+    margin: 15px auto 5px;
+    width: 120px;
+    position: relative;
+    background: var(--rating_default_color);
+}
+.rating::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: var(--rating_color);
+}
+.rating img{
+    position: relative;
+    z-index: 9;
+}
+
+.rating.active::before{
+    width: var(--rating);
+}
+/* rating style start */
 
 
 .section_header {

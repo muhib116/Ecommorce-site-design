@@ -1,0 +1,7 @@
+.single_product_container>* {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+}
+.single_product_container .images_wrapper{
+    border: 1px solid red;
+}

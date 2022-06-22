@@ -99,3 +99,6 @@
 {
     background-color: var(--success_color);
 }
+.best_rated_products_container .product_item .rating{
+    margin-left: auto;
+}

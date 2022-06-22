@@ -39,12 +39,12 @@
 .products_container .product_item .attributer .wishlist{
     background: var(--product_wishlist_bg);
     color: #fff;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(200%);
 }
 .products_container .product_item .attributer .quickview{
     background: var(--product_view_bg);
     color: #fff;
-    filter: grayscale(1);
+    filter: grayscale(1) brightness(150%);
     transition: var(--transition);
 }
 .products_container .product_item .attributer :is(.wishlist,.quickview):is(:hover,.active){
@@ -95,6 +95,7 @@
 {
     background-color: var(--success_color);
 }
+
 
 
 @media all and (min-width: 768px){

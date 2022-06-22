@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+</head>
+<body>
+
+    <include data-bind="components/header"></include>
+
+
+    <div class="single_product_container">
+        <div class="container">
+            <div class="images_wrapper">
+                <div class="big_image">
+                    <img 
+                        class="zoomThisImage" 
+                        id="big_image_tag"
+                        src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp" 
+                        data-src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp"
+                    >
+                </div>
+                <div id="single_product_image_gallery-carousel" class="owl-carousel owl-theme single_product_image_gallery">
+                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp" alt="">
+                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/OmQ3I4SdFkD2Zx1w0YomLBZsDPyrsgXAZGznIJcn.webp" alt="">
+                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/14mYXAklP7gBCyj9PBQFk7V3Qd7nTsg0y0E5cNHy.webp" alt="">
+                </div>
+            </div>
+            <div class="information">
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+    <script src="fileInclude.js"></script>
+    <script src="assets/js/image_zoom.js"></script>
+    <script src="assets/js/app.js"></script>
+
+
+    <script>
+        // plugin configaration of product image zoom
+        new Image_zoom({
+            img: '.zoomThisImage',
+            bgColor: '#0002',
+            borderColor: '#bb330055',
+            megnifierSize: 200, 
+            zoom: 5,
+            outputSize: 450,
+            megnifierLoweLimit: 10,
+            zIndex: 15,
+            resultBgColor: "#fff",
+            breakPoint: 900
+        });
+        // plugin configaration of product image zoom
+    </script>
+
+
+    <script>
+        // single images slider start
+        $('#single_product_image_gallery-carousel').owlCarousel({
+            loop: false,
+            autoplay: false,
+            autoplayHoverPause:false,
+            margin: 16,
+            dots: true,
+            nav: true,
+            items: 7,
+            responsive : {
+                0 : {
+                    items: 2
+                },
+                480 : {
+                    items: 3
+                },
+                768 : {
+                    items: 5
+                },
+                900 : {
+                    items: 6
+                },
+                1200 : {
+                    items: 7
+                }
+            }
+        })
+        // single images slider end
+    </script>
+
+
+    <script>
+        function changeBigImage(big_image, event){
+            big_image = document.getElementById(big_image);
+            if(big_image)
+            {
+                let currentImage = event.target.src;
+
+                big_image.src = currentImage;
+                big_image.dataset.src = currentImage;
+                console.log(big_image, event.target);
+            }
+        }
+    </script>
+</body>
+</html>

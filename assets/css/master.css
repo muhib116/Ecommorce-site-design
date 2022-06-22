@@ -7,6 +7,8 @@
     --success_color: #3aab3a;
     --danger_color: #ff4715;
     --warning_color: #ffc400;
+    --rating_color: #ffd06e;
+    --rating_default_color: lightgray;
 
     --product_view_bg: var(--success_color);
     --product_wishlist_bg: var(--danger_color);
