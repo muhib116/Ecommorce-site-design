@@ -44,7 +44,9 @@ body{
     color: var(--default_text_color);
     font-weight: 400;
 }
-
+strong{
+    font-weight: 500;
+}
 .container{
     max-width: var(--container_width);
     width: 100%;
@@ -118,6 +120,23 @@ svg{
 button:active{
     transform: scale(0.95);
 }
+
+/* table design start */
+.table_responsive{
+    overflow-x: auto;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table :is(tr){
+    border: 1px solid #f5f5f5;
+}
+table :is(th, td){
+    padding: 10px 15px;
+    text-align: left;
+}
+/* table design end */
 
 /* dropdown with image start */
 .dropdown_with_img{
@@ -214,3 +233,37 @@ button:active{
     border-radius: 0;
 }
 /* product counter end */
+
+
+/* qnty up down start */
+.quantity {
+    width: fit-content;
+    text-align: center;
+    border: 1px solid #0001;
+    display: flex;
+}
+.quantity input{
+    padding: 6px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 0px;
+    border:
+    none;
+    border-left: 1px solid #0001;
+    border-right: 1px solid #0001;
+    width: 45px;
+    height: 38px;
+}
+.quantity button{
+    background-color: #f7f7f7;
+    width: 30px;
+    border: none;
+    outline: none;
+    transition: var(--transition);
+    aspect-ratio: 1/1;
+}
+.quantity button:hover{
+    background-color: var(--secondary_color);
+    color: #fff;
+}
+/* qnty up down end */

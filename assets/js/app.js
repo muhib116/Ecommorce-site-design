@@ -77,7 +77,7 @@ setTimeout(()=>
         items: 7,
         responsive : {
             0 : {
-                items: 2
+                items: 1
             },
             768 : {
                 items: 2
@@ -175,5 +175,30 @@ setTimeout(()=>
         }
     })
     // best selling product slider end
+
+
+    // single product tab start
+    let tab_btns     = document.querySelectorAll('.tab_btn');
+    let tab_contents = document.querySelectorAll('.tab_content');
+    if(tab_btns && tab_contents){
+        tab_btns = Array.from(tab_btns);
+        tab_btns.forEach((tab_btn, index)=>{
+            tab_btn.addEventListener('click', ()=>
+            {
+                removeAllActiveCls(tab_contents);
+                removeAllActiveCls(tab_btns);
+                tab_btn.classList.add('active');
+                (tab_contents[index]) && tab_contents[index].classList.add('active');
+            })
+        })
+    }
+
+    function removeAllActiveCls(elements){
+        elements = Array.from(elements);
+        elements.forEach(element=>{
+            element.classList.remove('active')
+        })
+    }
+    // single product tab end
 
 }, delay)

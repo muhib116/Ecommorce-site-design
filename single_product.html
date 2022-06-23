@@ -15,30 +15,144 @@
 <body>
 
     <include data-bind="components/header"></include>
+    <include data-bind="components/tab"></include>
 
 
-    <div class="single_product_container">
-        <div class="container">
-            <div class="images_wrapper">
-                <div class="big_image">
-                    <img 
-                        class="zoomThisImage" 
-                        id="big_image_tag"
-                        src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp" 
-                        data-src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp"
-                    >
+    <!-- product info start -->
+        <div class="single_product_container">
+            <div class="container">
+
+                <div class="images_wrapper">
+                    <div class="big_image">
+                        <img 
+                            class="zoomThisImage" 
+                            id="big_image_tag"
+                            src="https://shop.activeitzone.com/public/uploads/all/WoQDLrxn7JdjoVGwHSUWZH8D1TVHHTPeoCrX1UAm.webp" 
+                            data-src="https://shop.activeitzone.com/public/uploads/all/WoQDLrxn7JdjoVGwHSUWZH8D1TVHHTPeoCrX1UAm.webp"
+                        >
+                    </div>
+                    <div id="single_product_image_gallery-carousel" class="owl-carousel owl-theme single_product_image_gallery">
+                        <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/WoQDLrxn7JdjoVGwHSUWZH8D1TVHHTPeoCrX1UAm.webp" alt="">
+                        <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/HHq0vJ89L8EzTDlwymcNVfbOhfjYQetQt0R4G8rk.webp" alt="">
+                        <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/dHPxFFKzg1Wfa1VnR29LmLTAzAtog3Y13FPZu9Ko.webp" alt="">
+                    </div>
                 </div>
-                <div id="single_product_image_gallery-carousel" class="owl-carousel owl-theme single_product_image_gallery">
-                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/5zJFeWkDgychNeHctFPjDwJcgY4Uj0BwTBcV6MJF.webp" alt="">
-                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/OmQ3I4SdFkD2Zx1w0YomLBZsDPyrsgXAZGznIJcn.webp" alt="">
-                    <img onclick="changeBigImage('big_image_tag', event)" src="https://shop.activeitzone.com/public/uploads/all/14mYXAklP7gBCyj9PBQFk7V3Qd7nTsg0y0E5cNHy.webp" alt="">
+
+                <div class="information">
+                    <h1 class="product_name">MODELTY Pink Floral Maxi dress</h1>
+                    
+                    <!-- product rating start -->
+                    <div class="rating_wrapper">
+                        <div class="rating active" style="--rating: 80%">
+                            <img src="assets/images/single-rating.png" alt="alt">
+                        </div>
+                        <a href="#">(102) Review</a>
+                    </div>
+                    <!-- product rating end -->
+
+                    <p class="price">
+                        <strong>$700.00</strong>
+                        <del>$80.00</del>
+                    </p>
+
+                    <div class="short_description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                        molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                        numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                    </div>
+
+                    <!-- product attribute start -->
+                    <div class="product_attribute_wrapper">
+                        <h2 class="attr_title">Available Options</h2>
+                        <div class="attribute">
+                            <div class="items">
+                                <p class="attr_name">Color</p>
+                                <div class="attr_value">
+                                    <label style="--bg: url(https://shop.activeitzone.com/public/uploads/all/WoQDLrxn7JdjoVGwHSUWZH8D1TVHHTPeoCrX1UAm.webp);">
+                                        <input type="radio" name="color">
+                                        <span></span>
+                                    </label>
+                                    <label style="--bg: orange;">
+                                        <input type="radio" name="color">
+                                        <span></span>
+                                    </label>
+                                    <label style="--bg: #5c5ed8;">
+                                        <input type="radio" name="color">
+                                        <span></span>
+                                    </label>
+                                    <label style="--bg: #47a934;">
+                                        <input type="radio" name="color">
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="items">
+                                <p class="attr_name">Size</p>
+                                <div class="attr_value">
+                                    <label>
+                                        S
+                                        <input type="radio" name="size">
+                                        <span></span>
+                                    </label>
+                                    <label>
+                                        M
+                                        <input type="radio" name="size">
+                                        <span></span>
+                                    </label>
+                                    <label>
+                                        L
+                                        <input type="radio" name="size">
+                                        <span></span>
+                                    </label>
+                                    <label>
+                                        XL
+                                        <input type="radio" name="size">
+                                        <span></span>
+                                    </label>
+                                    <label>
+                                        XXL
+                                        <input type="radio" name="size">
+                                        <span></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product attribute end -->
+
+
+                    <div class="add_to_cart_and_qnty_wrapper">
+                        <div class="quantity_wrapper">
+                            <strong>Quantity:</strong>
+                            <!-- product quantity start -->
+                            <div class="quantity">
+                                <button>+</button>
+                                <input type="text" readonly value="0" min="0">
+                                <button>-</button>
+                            </div>
+                            <!-- product quantity end -->
+                        </div>
+
+                        <div class="add_to_cart_and_wishlist_btns_wrapper">
+                            <button class="addtocart">Add To Cart</button>
+                            <button class="wishlist"><i class="fa fa-heart"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="cat_and_stock">
+                        <p><strong>Category: </strong> Clothing</p>
+                        <p><strong>Available: </strong> 180 products in stock</p>
+                    </div>
+
                 </div>
-            </div>
-            <div class="information">
-                
             </div>
         </div>
-    </div>
+    <!-- product info end -->
+
+    
+    <include data-bind="components/banner2"></include>
+    <include data-bind="components/products"></include>
+
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -70,7 +184,7 @@
     <script>
         // single images slider start
         $('#single_product_image_gallery-carousel').owlCarousel({
-            loop: false,
+            loop: true,
             autoplay: false,
             autoplayHoverPause:false,
             margin: 16,
@@ -82,16 +196,10 @@
                     items: 2
                 },
                 480 : {
-                    items: 3
+                    items: 2
                 },
                 768 : {
                     items: 5
-                },
-                900 : {
-                    items: 6
-                },
-                1200 : {
-                    items: 7
                 }
             }
         })
