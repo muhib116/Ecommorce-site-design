@@ -11,12 +11,14 @@
 @import url("featured_shops.css");
 @import url("tab.css");
 @import url("ratings.css");
+@import url("coupon.css");
 
 
 
 @import url("all-categories.css");
 @import url("brands.css");
 @import url("single_product.css");
+@import url("shop.css");
 
 .rating {
     margin: 15px auto 5px;

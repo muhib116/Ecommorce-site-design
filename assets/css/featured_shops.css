@@ -46,8 +46,6 @@
     margin: 10px 0;
     white-space: nowrap;
     text-align: left;
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
-    border-radius: 50px 0 0;
 }
 .shop_section_container .shop_item .shop_name{
     margin: 0;

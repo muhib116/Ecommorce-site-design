@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+</head>
+<body>
+
+    <include data-bind="components/header"></include>
+
+
+    <div class="shop_banner_wrapper">
+        <div class="container" style="background-image:url('assets/images/shop_banner.webp')">
+            <div class="shop_banner">
+                
+                <!-- social media start -->
+                <div class="social_wrapper">
+                    <a href="#" style="--bgcolor: #1877F2;">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" style="--bgcolor: #1DA1F2;">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" style="--bgcolor: #BD081C;">
+                        <i class="fa fa-pinterest"></i>
+                    </a>
+                    <a href="#" style="--bgcolor: #E4405F;">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#" style="--bgcolor: #CD201F;">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </div>
+                <!-- social media end -->
+
+                
+                <div class="banner_left">
+                    <!-- shop logo start -->
+                    <a href="#" class="shop_logo">
+                        <img src="https://shop.activeitzone.com/public/uploads/all/4GnbgOOz8kW3cGrgsuPXxFcnDxIk7OsyIC0jPqIg.png" alt="">
+                    </a>
+                    <!-- shop logo end -->
+
+                    <h1 class="shop_name">Shop Name Goes Here</h1>
+
+                    <!-- shop rating start -->
+                    <di class="shop_rating_wrapper">
+                        <div class="rating active" style="--rating: 80%">
+                            <img src="assets/images/single-rating.png" alt="alt">
+                        </div>
+                        <small>(14 Ratings)</small>
+                    </di>
+                    <!-- shop rating end -->
+                </div>
+
+                <!-- contact info start -->
+                <div class="contact_and_location">
+                    <a href="tel:01xxx-xxxxxx">
+                        <i class="icon fa fa-phone"></i>
+                        01xxx-xxx xxx
+                    </a>
+                    <a href="mailto:demo@gmail.com">
+                        <i class="icon fa fa-envelope"></i>
+                        demo@gmail.com
+                    </a>
+                    <a href="mailto:demo@gmail.com">
+                        <i class="icon fa fa-thumb-tack"></i>
+                        Home #, Streat No: #, Dhaka, Bangladesh
+                    </a>
+                </div>
+                <!-- contact info end -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="shop_navigation">
+        <nav class="container">
+            <a href="#" class="active">Products</a>
+            <a href="#">Coupon</a>
+            <a href="#">All Products</a>
+        </nav>
+    </div>
+
+
+    <include data-bind="components/new_arrival"></include>
+    <include data-bind="components/products"></include>
+    <include data-bind="components/coupon"></include>
+    <include data-bind="components/banner"></include>
+    <include data-bind="components/best_rated"></include>
+    <include data-bind="components/banner2"></include>
+    <include data-bind="components/best_selling"></include>
+
+
+
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+    <script src="fileInclude.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
